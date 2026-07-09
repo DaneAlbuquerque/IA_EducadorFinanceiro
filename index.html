@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Educador Financeiro</title>
+  </head>
+  <body>
+     <div class="container">
+        
+        <!-- CABEÇALHO -->
+        <h1>💰 Educador Financeiro</h1>
+        <p class="subtitulo">Organize seus gastos e economize <span id="metaTexto">15%</span> da sua renda</p>
+
+        <!-- RENDA MENSAL -->
+        <div class="area-renda">
+            <h2>💵 Sua Renda Mensal</h2>
+            <div class="linha-renda">
+                <input type="number" id="rendaMensal" placeholder="Ex: 5000">
+                <button onclick="salvarRenda()">💾 Salvar Renda</button>
+            </div>
+            <p id="mostraRenda" class="renda-atual"></p>
+        </div>
+
+        <!-- ÁREA PARA ADICIONAR -->
+        <div class="area-add">
+            <h2>📝 Adicionar gasto</h2>
+            
+            <div class="linha-input">
+                <input type="text" id="nomeGasto" placeholder="Ex: Aluguel">
+                <input type="number" id="valorGasto" placeholder="R$">
+                <select id="prioridadeGasto">
+                    <option value="alta">🔴 Alta</option>
+                    <option value="media" selected>🟡 Média</option>
+                    <option value="baixa">🟢 Baixa</option>
+                </select>
+                <button onclick="adicionarGasto()">➕ Adicionar</button>
+            </div>
+        </div>
+
+        <!-- RESUMO -->
+        <div class="resumo">
+            <span>💰 Total: <span id="totalGastos">R$ 0,00</span></span>
+            <span>📦 Itens: <span id="totalItens">0</span></span>
+            <span>📊 % Renda: <span id="percentualRenda">0%</span></span>
+            <span>🎯 Meta: <span id="metaValor">R$ 0,00</span></span>
+        </div>
+
+        <!-- LISTA DE GASTOS -->
+        <ul id="listaGastos">
+            <li class="vazio">Nenhum gasto cadastrado</li>
+        </ul>
+
+        <!-- BARRA DE PROGRESSO DA META -->
+        <div class="barra-meta">
+            <div class="barra-info">
+                <span>🎯 Progresso da Meta (15% da renda)</span>
+                <span id="progressoTexto">0%</span>
+            </div>
+            <div class="barra-container">
+                <div class="barra-progresso" id="barraProgresso" style="width: 0%"></div>
+            </div>
+            <div class="barra-detalhes">
+                <span id="economiaAtual">R$ 0,00</span>
+                <span id="metaNecessaria">Meta: R$ 0,00</span>
+            </div>
+        </div>
+
+        <!-- BOTÕES -->
+        <div class="botoes">
+            <button class="btn-dicas" onclick="gerarDicas()">💡 Ver Dicas</button>
+            <button class="btn-limpar" onclick="limparTudo()">🗑️ Limpar Tudo</button>
+        </div>
+
+        <!-- ONDE AS DICAS APARECEM -->
+        <div class="dicas" id="boxDicas">
+            <h3>💡 Dicas Personalizadas</h3>
+            <div id="conteudoDicas"></div>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
