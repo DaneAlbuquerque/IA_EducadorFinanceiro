@@ -98,4 +98,7 @@ Criar telas (app/site) para organizar essas informações em **4 pilares interat
 - **Gastos obrigatórios** (com checklists)
 - **Meta de economia** (com barra de progresso)
 - **Dicas personalizadas**
-- **Oportunidades de renda extra**
+- **Oportunidades de renda extra**  
+  
+
+ [![Deployed on Vercel](https://img.shields.io/badge/vercel-deployed-000000?style=for-the-badge&logo=vercel)](https://meu-projeto.vercel.app)
